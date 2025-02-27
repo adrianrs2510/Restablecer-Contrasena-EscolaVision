@@ -1,52 +1,113 @@
-/* Estilos para la página */
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #2d3e50;
+    padding: 15px 30px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 50px;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    flex-direction: column;
+    margin-top: 100px; /* Esto asegura que el contenido no quede tapado por el header fijo */
+    flex-grow: 1;
 }
 
 .container {
-    background-color: #fff;
-    padding: 20px;
+    background-color: white;
+    padding: 40px 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
+    text-align: center;
 }
 
 h2 {
-    text-align: center;
-    color: #333;
+    color: #2d3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+main p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 label {
-    margin-bottom: 5px;
-    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    align-self: flex-start;
 }
 
 input {
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 350px;
     border-radius: 4px;
     border: 1px solid #ddd;
+    font-size: 16px;
 }
 
 button {
-    padding: 10px;
+    padding: 12px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 350px;
 }
 
 button:hover {
@@ -54,8 +115,17 @@ button:hover {
 }
 
 #message {
-    text-align: center;
     margin-top: 15px;
     font-size: 16px;
-    color: #f44336;
 }
+
+footer {
+    width: 100%;
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+}
+
